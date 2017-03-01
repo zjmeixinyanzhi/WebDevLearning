@@ -121,7 +121,7 @@ public class RequestServlet extends HttpServlet {
 		
 		// 这里<title></title>之间的信息在浏览器中显示为标题
 		out.println("  <HEAD><TITLE>Request Servlet</TITLE></HEAD>");
-		out.println("  <style>body, font, td, div {font-size:12px; line-height:18px; }</style>");
+		out.println("  <style>body, font, td, div {font-size:16px; line-height:18px; }</style>");
 		out.println("  <BODY>");
 		
 		out.println("<b>您的IP为</b> " + remoteAddr + "<b>，位于</b> " + getAddress(remoteAddr) + "<b>；您使用</b> " + getOS(userAgent) + " <b>操作系统</b>，" + getNavigator(userAgent) + " <b>。您使用</b> " + getLocale(locale) + "。<br/>");

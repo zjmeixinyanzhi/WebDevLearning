@@ -116,7 +116,7 @@ public class IdentityServlet extends HttpServlet {
 		String userInputCheckCode=request.getParameter("param");
 		System.out.println(userInputCheckCode);
 
-		if(userInputCheckCode== null ||!this.checkCode.toLowerCase().equals(userInputCheckCode.toLowerCase())){
+		if(userInputCheckCode== null ||!this.checkCode.equalsIgnoreCase(userInputCheckCode)){
 			out.println("验证码校验失败！您输入验证为：<b>" +userInputCheckCode+ "</b>，正确验证码为："+this.checkCode);
 		}
 		else {
