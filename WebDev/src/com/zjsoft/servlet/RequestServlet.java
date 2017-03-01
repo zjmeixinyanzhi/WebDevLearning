@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.zjsoft.util.ip.IpUtil;
 
-@WebServlet("/RequestServlet2")
+@WebServlet("/RequestServlet")
 public class RequestServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -7936817351382556277L;
