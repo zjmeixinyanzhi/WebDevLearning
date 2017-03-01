@@ -1,4 +1,4 @@
-package com.zjsoft.util.ip;
+ï»¿package com.zjsoft.util.ip;
 
 /*
 * LumaQQ - Java QQ Client
@@ -24,10 +24,10 @@ package com.zjsoft.util.ip;
 
 /**
  * <pre>
- * Ò»ÌõIP·¶Î§¼ÇÂ¼£¬²»½ö°üÀ¨¹ú¼ÒºÍÇøÓò£¬Ò²°üÀ¨ÆğÊ¼IPºÍ½áÊøIP
+ * ä¸€æ¡IPèŒƒå›´è®°å½•ï¼Œä¸ä»…åŒ…æ‹¬å›½å®¶å’ŒåŒºåŸŸï¼Œä¹ŸåŒ…æ‹¬èµ·å§‹IPå’Œç»“æŸIP
  * </pre>
  * 
- * @author ÂíÈô„Â
+ * @author é©¬è‹¥åŠ¼
  */
 public class IPEntry {
     public String beginIp;
@@ -36,14 +36,14 @@ public class IPEntry {
     public String area;
     
     /**
-     * ¹¹Ôìº¯Êı
+     * æ„é€ å‡½æ•°
      */
     public IPEntry() {
         beginIp = endIp = country = area = "";
     }
     
     public String toString(){
-    	return this.area+"  "+this.country+"  IP·¶Î§:"+this.beginIp+"-"+this.endIp;
+    	return this.area+"  "+this.country+"  IPèŒƒå›´:"+this.beginIp+"-"+this.endIp;
     }
 } 
 

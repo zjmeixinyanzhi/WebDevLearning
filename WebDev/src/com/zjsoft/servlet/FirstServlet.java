@@ -1,4 +1,4 @@
-package com.zjsoft.servlet;
+ï»¿package com.zjsoft.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,15 +29,15 @@ public class FirstServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		// ÉèÖÃ request£¬response ±àÂë·½Ê½
+		// è®¾ç½® requestï¼Œresponse ç¼–ç æ–¹å¼
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		// ÉèÖÃÎÄµµÀàĞÍ
+		// è®¾ç½®æ–‡æ¡£ç±»å‹
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 				
 		System.out.print("Do Get!");
-		// Êä³öµ½¿Í»§¶Ëä¯ÀÀÆ÷
+		// è¾“å‡ºåˆ°å®¢æˆ·ç«¯æµè§ˆå™¨
 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 		out.println("<HTML>");
 		out.println("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
@@ -46,16 +46,16 @@ public class FirstServlet extends HttpServlet {
 		
 		String requestURI = request.getRequestURI();
 		out.println("<form action='" + requestURI + "' method='post'>");
-		out.println("ÇëÊäÈëÄúµÄÃû×Ö£º<input type='text' name='name' />");
+		out.println("è¯·è¾“å…¥æ‚¨çš„åå­—ï¼š<input type='text' name='name' />");
 		out.println("<input type='submit' />");
 		out.println("</form>");
 		out.println("");
-		// È¡ä¯ÀÀÆ÷Ìá½»µÄ name ²ÎÊı
+		// å–æµè§ˆå™¨æäº¤çš„ name å‚æ•°
 		String name = request.getParameter("name");
 		
-		// Èç¹û name ²»Îª¿ÕÇÒ³¤¶È´óÓÚ 0
+		// å¦‚æœ name ä¸ä¸ºç©ºä¸”é•¿åº¦å¤§äº 0
 		if(name != null && name.trim().length() > 0){
-			out.println("ÄúºÃ, <b>" + name + "</b>. »¶Ó­À´µ½ Java Web ÊÀ½ç. ");
+			out.println("æ‚¨å¥½, <b>" + name + "</b>. æ¬¢è¿æ¥åˆ° Java Web ä¸–ç•Œ. ");
 		}
 		
 		out.println("  </BODY>");

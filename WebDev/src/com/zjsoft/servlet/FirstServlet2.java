@@ -1,4 +1,4 @@
-package com.zjsoft.servlet;
+ï»¿package com.zjsoft.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -46,11 +46,11 @@ public class FirstServlet2 extends HttpServlet {
 			response.setCharacterEncoding("UTF-8");
 			request.setCharacterEncoding("UTF-8");
 			
-			// ·ÃÎÊ¸Ã Servlet µÄ URI
+			// è®¿é—®è¯¥ Servlet çš„ URI
 			String requestURI = request.getRequestURI();
-			// ·ÃÎÊ¸Ã Servlet µÄ·½Ê½£¬ÊÇ GET »¹ÊÇ POST
+			// è®¿é—®è¯¥ Servlet çš„æ–¹å¼ï¼Œæ˜¯ GET è¿˜æ˜¯ POST
 			String method = request.getMethod();
-			// ¿Í»§¶ËÌá½»µÄ²ÎÊı param Öµ
+			// å®¢æˆ·ç«¯æäº¤çš„å‚æ•° param å€¼
 			String param = request.getParameter("param");
 			
 			response.setContentType("text/html");
@@ -59,14 +59,14 @@ public class FirstServlet2 extends HttpServlet {
 			out.println("<HTML>");
 			out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
 			out.println("  <BODY>");
-			out.println("	ÒÔ " + method + " ·½Ê½·ÃÎÊ¸ÃÒ³Ãæ¡£È¡µ½µÄ param ²ÎÊıÎª£º" + param + "<br/>");
+			out.println("	ä»¥ " + method + " æ–¹å¼è®¿é—®è¯¥é¡µé¢ã€‚å–åˆ°çš„ param å‚æ•°ä¸ºï¼š" + param + "<br/>");
 			
-			out.println("	<form action='" + requestURI + "' method='get'><input type='text' name='param' value=''><input type='submit' value='ÒÔ GET ·½Ê½·ÃÎÊ RequestServlet'></form>");
-			out.println("	<form action='" + requestURI + "' method='post'><input type='text' name='param' value=''><input type='submit' value='ÒÔ POST ·½Ê½·ÃÎÊ RequestServlet'></form>");
+			out.println("	<form action='" + requestURI + "' method='get'><input type='text' name='param' value=''><input type='submit' value='ä»¥ GET æ–¹å¼è®¿é—® RequestServlet'></form>");
+			out.println("	<form action='" + requestURI + "' method='post'><input type='text' name='param' value=''><input type='submit' value='ä»¥ POST æ–¹å¼è®¿é—® RequestServlet'></form>");
 			
-			// ÓÉ¿Í»§¶Ëä¯ÀÀÆ÷¶ÁÈ¡¸ÃÎÄµµµÄ¸üĞÂÊ±¼ä
-			out.println("	<script>document.write('±¾Ò³Ãæ×îºó¸üĞÂÊ±¼ä£º' + document.lastModified + '<br />'); </script>");
-			out.println("	<script>document.write('±¾Ò³ÃæURL£º' + location + '<br/>' ); </script>");
+			// ç”±å®¢æˆ·ç«¯æµè§ˆå™¨è¯»å–è¯¥æ–‡æ¡£çš„æ›´æ–°æ—¶é—´
+			out.println("	<script>document.write('æœ¬é¡µé¢æœ€åæ›´æ–°æ—¶é—´ï¼š' + document.lastModified + '<br />'); </script>");
+			out.println("	<script>document.write('æœ¬é¡µé¢URLï¼š' + location + '<br/>' ); </script>");
 			
 			out.println("  </BODY>");
 			out.println("</HTML>");

@@ -1,4 +1,4 @@
-package com.zjsoft.servlet;
+ï»¿package com.zjsoft.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,32 +20,32 @@ public class RequestServlet extends HttpServlet {
 
 	/**
 	 * @param accept
-	 * @return ¿Í»§¶Ëä¯ÀÀÆ÷½ÓÊÜµÄÎÄ¼şÀàĞÍ
+	 * @return å®¢æˆ·ç«¯æµè§ˆå™¨æ¥å—çš„æ–‡ä»¶ç±»å‹
 	 */
 	private String getAccept(String accept){
 		StringBuffer buffer = new StringBuffer();
-		if(accept.contains("image/gif"))	buffer.append("GIF ÎÄ¼ş, ");
-		if(accept.contains("image/x-xbitmap"))	buffer.append("BMP ÎÄ¼ş, ");
-		if(accept.contains("image/jpeg"))	buffer.append("JPG ÎÄ¼ş, ");
-		if(accept.contains("application/vnd.ms-excel"))	buffer.append("Excel ÎÄ¼ş, ");
-		if(accept.contains("application/vnd.ms-powerpoint"))	buffer.append("PPT ÎÄ¼ş, ");
-		if(accept.contains("application/msword"))	buffer.append("Word ÎÄ¼ş, ");
+		if(accept.contains("image/gif"))	buffer.append("GIF æ–‡ä»¶, ");
+		if(accept.contains("image/x-xbitmap"))	buffer.append("BMP æ–‡ä»¶, ");
+		if(accept.contains("image/jpeg"))	buffer.append("JPG æ–‡ä»¶, ");
+		if(accept.contains("application/vnd.ms-excel"))	buffer.append("Excel æ–‡ä»¶, ");
+		if(accept.contains("application/vnd.ms-powerpoint"))	buffer.append("PPT æ–‡ä»¶, ");
+		if(accept.contains("application/msword"))	buffer.append("Word æ–‡ä»¶, ");
 		return buffer.toString().replaceAll(", $", "");
 	}
 	/**
 	 * @param locale
-	 * @return ÓïÑÔ»·¾³Ãû³Æ
+	 * @return è¯­è¨€ç¯å¢ƒåç§°
 	 */
 	private String getLocale(Locale locale) {
-		if(Locale.SIMPLIFIED_CHINESE.equals(locale))	return "¼òÌåÖĞÎÄ";
-		if(Locale.TRADITIONAL_CHINESE.equals(locale))	return "·±ÌåÖĞÎÄ";
-		if(Locale.ENGLISH.equals(locale))				return "Ó¢ÎÄ";
-		if(Locale.JAPANESE.equals(locale))				return "ÈÕÎÄ";
-		return "Î´ÖªÓïÑÔ»·¾³";
+		if(Locale.SIMPLIFIED_CHINESE.equals(locale))	return "ç®€ä½“ä¸­æ–‡";
+		if(Locale.TRADITIONAL_CHINESE.equals(locale))	return "ç¹ä½“ä¸­æ–‡";
+		if(Locale.ENGLISH.equals(locale))				return "è‹±æ–‡";
+		if(Locale.JAPANESE.equals(locale))				return "æ—¥æ–‡";
+		return "æœªçŸ¥è¯­è¨€ç¯å¢ƒ";
 	}
 	/**
-	 * @param ip IPµØÖ·
-	 * @return IPµØÖ·¶ÔÓ¦µÄÎïÀíÎ»ÖÃ
+	 * @param ip IPåœ°å€
+	 * @return IPåœ°å€å¯¹åº”çš„ç‰©ç†ä½ç½®
 	 */
 	private String getAddress(String ip){
 		return IpUtil.getIpAddress(ip);
@@ -53,30 +53,30 @@ public class RequestServlet extends HttpServlet {
 	
 	/**
 	 * @param userAgent
-	 * @return ¿Í»§¶Ëä¯ÀÀÆ÷ĞÅÏ¢
+	 * @return å®¢æˆ·ç«¯æµè§ˆå™¨ä¿¡æ¯
 	 */
 	private String getNavigator(String userAgent) {
 		System.out.println(userAgent);
-		if(userAgent.indexOf("TencentTraveler") > 0)	return "ÌÚÑ¶ä¯ÀÀÆ÷";
-		if(userAgent.indexOf("Maxthon") > 0)	return "Maxthonä¯ÀÀÆ÷";
-		if(userAgent.indexOf("MyIE2") > 0)	return "MyIE2ä¯ÀÀÆ÷";
-		if(userAgent.indexOf("Firefox") > 0)	return "Firefoxä¯ÀÀÆ÷";
-		if(userAgent.indexOf("MSIE") > 0)	return "IE ä¯ÀÀÆ÷";
-		return "Î´Öªä¯ÀÀÆ÷";
+		if(userAgent.indexOf("TencentTraveler") > 0)	return "è…¾è®¯æµè§ˆå™¨";
+		if(userAgent.indexOf("Maxthon") > 0)	return "Maxthonæµè§ˆå™¨";
+		if(userAgent.indexOf("MyIE2") > 0)	return "MyIE2æµè§ˆå™¨";
+		if(userAgent.indexOf("Firefox") > 0)	return "Firefoxæµè§ˆå™¨";
+		if(userAgent.indexOf("MSIE") > 0)	return "IE æµè§ˆå™¨";
+		return "æœªçŸ¥æµè§ˆå™¨";
 	}
 
 	/**
 	 * @param userAgent
-	 * @return ¿Í»§¶Ë²Ù×÷ÏµÍ³
+	 * @return å®¢æˆ·ç«¯æ“ä½œç³»ç»Ÿ
 	 */
 	private String getOS(String userAgent) {
-		System.out.println("²Ù×÷ÏµÍ³"+userAgent);
+		System.out.println("æ“ä½œç³»ç»Ÿ"+userAgent);
 		if(userAgent.indexOf("Windows NT 5.1") > 0)	return "Windows XP";
 		if(userAgent.indexOf("Windows 98") > 0)	return "Windows 98";
 		if(userAgent.indexOf("Windows NT 5.0") > 0)	return "Windows 2000";
 		if(userAgent.indexOf("Linux") > 0)	return "Linux";
 		if(userAgent.indexOf("Unix") > 0)	return "Unix";
-		return "Î´Öª";
+		return "æœªçŸ¥";
 	}
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -119,23 +119,23 @@ public class RequestServlet extends HttpServlet {
 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 		out.println("<HTML>");
 		
-		// ÕâÀï<title></title>Ö®¼äµÄĞÅÏ¢ÔÚä¯ÀÀÆ÷ÖĞÏÔÊ¾Îª±êÌâ
+		// è¿™é‡Œ<title></title>ä¹‹é—´çš„ä¿¡æ¯åœ¨æµè§ˆå™¨ä¸­æ˜¾ç¤ºä¸ºæ ‡é¢˜
 		out.println("  <HEAD><TITLE>Request Servlet</TITLE></HEAD>");
 		out.println("  <style>body, font, td, div {font-size:12px; line-height:18px; }</style>");
 		out.println("  <BODY>");
 		
-		out.println("<b>ÄúµÄIPÎª</b> " + remoteAddr + "<b>£¬Î»ÓÚ</b> " + getAddress(remoteAddr) + "<b>£»ÄúÊ¹ÓÃ</b> " + getOS(userAgent) + " <b>²Ù×÷ÏµÍ³</b>£¬" + getNavigator(userAgent) + " <b>¡£ÄúÊ¹ÓÃ</b> " + getLocale(locale) + "¡£<br/>");
-		out.println("<b>·şÎñÆ÷IPÎª</b> " + localAddr + "<b>£¬Î»ÓÚ</b> " + getAddress(localAddr) + "<b>£»·şÎñÆ÷Ê¹ÓÃ</b> " + serverPort + " <b>¶Ë¿Ú£¬ÄúµÄä¯ÀÀÆ÷Ê¹ÓÃÁË</b> " + port + " <b>¶Ë¿Ú·ÃÎÊ±¾ÍøÒ³¡£</b><br/>");
-		out.println("<b>·şÎñÆ÷Èí¼şÎª</b>£º" + serverInfo + "¡£<b>·şÎñÆ÷Ãû³ÆÎª</b> " + localName + "¡£<br/>");
-		out.println("<b>ÄúµÄä¯ÀÀÆ÷½ÓÊÜ</b> " + getAccept(accept) + "¡£<br/>");
-		out.println("<b>Äú´Ó</b> " + referer + " <b>·ÃÎÊµ½¸ÃÒ³Ãæ¡£</b><br/>");
-		out.println("<b>Ê¹ÓÃµÄĞ­ÒéÎª</b> " + protocol + "¡£<b>URLĞ­ÒéÍ·</b> " + scheme + "£¬<b>·şÎñÆ÷Ãû³Æ</b> " + serverName + "£¬<b>Äú·ÃÎÊµÄURIÎª</b> " + requestURI + "¡£<br/>" );
-		out.println("<b>¸Ã Servlet Â·¾¶Îª</b> " + servletPath + "£¬<b>¸Ã Servlet ÀàÃûÎª</b> " + this.getClass().getName() + "¡£<br/>");
-		out.println("<b>±¾Ó¦ÓÃ³ÌĞòÔÚÓ²ÅÌµÄ¸ùÄ¿Â¼Îª</b> " + this.getServletContext().getRealPath("") + "£¬<b>ÍøÂçÏà¶ÔÂ·¾¶Îª</b> " + contextPath + "¡£ <br/>");
+		out.println("<b>æ‚¨çš„IPä¸º</b> " + remoteAddr + "<b>ï¼Œä½äº</b> " + getAddress(remoteAddr) + "<b>ï¼›æ‚¨ä½¿ç”¨</b> " + getOS(userAgent) + " <b>æ“ä½œç³»ç»Ÿ</b>ï¼Œ" + getNavigator(userAgent) + " <b>ã€‚æ‚¨ä½¿ç”¨</b> " + getLocale(locale) + "ã€‚<br/>");
+		out.println("<b>æœåŠ¡å™¨IPä¸º</b> " + localAddr + "<b>ï¼Œä½äº</b> " + getAddress(localAddr) + "<b>ï¼›æœåŠ¡å™¨ä½¿ç”¨</b> " + serverPort + " <b>ç«¯å£ï¼Œæ‚¨çš„æµè§ˆå™¨ä½¿ç”¨äº†</b> " + port + " <b>ç«¯å£è®¿é—®æœ¬ç½‘é¡µã€‚</b><br/>");
+		out.println("<b>æœåŠ¡å™¨è½¯ä»¶ä¸º</b>ï¼š" + serverInfo + "ã€‚<b>æœåŠ¡å™¨åç§°ä¸º</b> " + localName + "ã€‚<br/>");
+		out.println("<b>æ‚¨çš„æµè§ˆå™¨æ¥å—</b> " + getAccept(accept) + "ã€‚<br/>");
+		out.println("<b>æ‚¨ä»</b> " + referer + " <b>è®¿é—®åˆ°è¯¥é¡µé¢ã€‚</b><br/>");
+		out.println("<b>ä½¿ç”¨çš„åè®®ä¸º</b> " + protocol + "ã€‚<b>URLåè®®å¤´</b> " + scheme + "ï¼Œ<b>æœåŠ¡å™¨åç§°</b> " + serverName + "ï¼Œ<b>æ‚¨è®¿é—®çš„URIä¸º</b> " + requestURI + "ã€‚<br/>" );
+		out.println("<b>è¯¥ Servlet è·¯å¾„ä¸º</b> " + servletPath + "ï¼Œ<b>è¯¥ Servlet ç±»åä¸º</b> " + this.getClass().getName() + "ã€‚<br/>");
+		out.println("<b>æœ¬åº”ç”¨ç¨‹åºåœ¨ç¡¬ç›˜çš„æ ¹ç›®å½•ä¸º</b> " + this.getServletContext().getRealPath("") + "ï¼Œ<b>ç½‘ç»œç›¸å¯¹è·¯å¾„ä¸º</b> " + contextPath + "ã€‚ <br/>");
 		
 		out.println("<br/>");
 				
-		out.println("<br/><br/><a href=" + requestURI + "> µã»÷Ë¢ĞÂ±¾Ò³Ãæ </a>");
+		out.println("<br/><br/><a href=" + requestURI + "> ç‚¹å‡»åˆ·æ–°æœ¬é¡µé¢ </a>");
 		
 		out.println("  </BODY>");
 		out.println("</HTML>");

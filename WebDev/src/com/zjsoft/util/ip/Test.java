@@ -1,4 +1,4 @@
-package com.zjsoft.util.ip;
+ï»¿package com.zjsoft.util.ip;
 /**
  * @author LJ-silver
  */
@@ -13,8 +13,8 @@ public class Test {
 
 		if(args.length==2){
 			if("ip".equals(args[0])){
-				System.out.println(args[0]+"µÄËùÔÚµØÖ·ÊÇ:"+seeker.getAddress(args[1]));
-                            System.out.println(args[0]+"µÄËùÔÚµØÖ·ÊÇÊôÓÚ:"+seeker.getCountry(args[1]));
+				System.out.println(args[0]+"çš„æ‰€åœ¨åœ°å€æ˜¯:"+seeker.getAddress(args[1]));
+                            System.out.println(args[0]+"çš„æ‰€åœ¨åœ°å€æ˜¯å±äº:"+seeker.getCountry(args[1]));
 			}else if("address".equals(args[0])){
 				List a = seeker.getIPEntries(args[1]);
 System.out.println(args[0]+":");

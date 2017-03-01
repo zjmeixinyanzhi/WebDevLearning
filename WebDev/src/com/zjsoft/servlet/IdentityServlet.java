@@ -1,4 +1,4 @@
-package com.zjsoft.servlet;
+ï»¿package com.zjsoft.servlet;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -22,7 +22,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 @WebServlet("/IdentityServlet")
 public class IdentityServlet extends HttpServlet {
 	/**
-	 * Í¼Æ¬ÑéÖ¤Âë³ÌĞò
+	 * å›¾ç‰‡éªŒè¯ç ç¨‹åº
 	 */
 	private static final long serialVersionUID = -479885884254942306L;
 
@@ -81,7 +81,7 @@ public class IdentityServlet extends HttpServlet {
 			g.drawRect(random.nextInt(width), random.nextInt(height), 1, 1);
 		}
 
-		// ×ª³ÉJPEG¸ñÊ½
+		// è½¬æˆJPEGæ ¼å¼
 		ServletOutputStream out = response.getOutputStream();		
 		ImageIO.write(bi, "jpg", out);
 		
@@ -100,27 +100,27 @@ public class IdentityServlet extends HttpServlet {
 		
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		// ÉèÖÃÎÄµµÀàĞÍ
+		// è®¾ç½®æ–‡æ¡£ç±»å‹
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
 		
-		// Êä³öµ½¿Í»§¶Ëä¯ÀÀÆ÷
+		// è¾“å‡ºåˆ°å®¢æˆ·ç«¯æµè§ˆå™¨
 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 		out.println("<HTML>");
 		out.println("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
-		out.println("<HEAD><TITLE>ÑéÖ¤½á¹û</TITLE></HEAD>");
+		out.println("<HEAD><TITLE>éªŒè¯ç»“æœ</TITLE></HEAD>");
 		out.println("  <BODY>");		
 		out.println("");
-		// È¡ä¯ÀÀÆ÷Ìá½»µÄ name ²ÎÊı
+		// å–æµè§ˆå™¨æäº¤çš„ name å‚æ•°
 		String userInputCheckCode=request.getParameter("param");
 		System.out.println(userInputCheckCode);
 
 		if(userInputCheckCode== null ||!this.checkCode.toLowerCase().equals(userInputCheckCode.toLowerCase())){
-			out.println("ÑéÖ¤ÂëĞ£ÑéÊ§°Ü£¡ÄúÊäÈëÑéÖ¤Îª£º<b>" +userInputCheckCode+ "</b>£¬ÕıÈ·ÑéÖ¤ÂëÎª£º"+this.checkCode);
+			out.println("éªŒè¯ç æ ¡éªŒå¤±è´¥ï¼æ‚¨è¾“å…¥éªŒè¯ä¸ºï¼š<b>" +userInputCheckCode+ "</b>ï¼Œæ­£ç¡®éªŒè¯ç ä¸ºï¼š"+this.checkCode);
 		}
 		else {
-			out.println("ÑéÖ¤ÂëĞ£Ñé³É¹¦£¡");
+			out.println("éªŒè¯ç æ ¡éªŒæˆåŠŸï¼");
 		}		
 		out.println("  </BODY>");
 		out.println("</HTML>");

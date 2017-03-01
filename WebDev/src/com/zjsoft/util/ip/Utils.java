@@ -1,4 +1,4 @@
-package com.zjsoft.util.ip;
+ï»¿package com.zjsoft.util.ip;
 
 /*
  * Created on 2004-8-4
@@ -13,9 +13,9 @@ import java.io.UnsupportedEncodingException;
  */
 public class Utils {
     /**
-     * ´ÓipµÄ×Ö·û´®ĞÎÊ½µÃµ½×Ö½ÚÊı×éĞÎÊ½
-     * @param ip ×Ö·û´®ĞÎÊ½µÄip
-     * @return ×Ö½ÚÊı×éĞÎÊ½µÄip
+     * ä»ipçš„å­—ç¬¦ä¸²å½¢å¼å¾—åˆ°å­—èŠ‚æ•°ç»„å½¢å¼
+     * @param ip å­—ç¬¦ä¸²å½¢å¼çš„ip
+     * @return å­—èŠ‚æ•°ç»„å½¢å¼çš„ip
      */
     public static byte[] getIpByteArrayFromString(String ip) {
         byte[] ret = new byte[4];
@@ -38,11 +38,11 @@ public class Utils {
           System.out.println(getIpStringFromBytes(a)); 
     }
     /**
-     * ¶ÔÔ­Ê¼×Ö·û´®½øĞĞ±àÂë×ª»»£¬Èç¹ûÊ§°Ü£¬·µ»ØÔ­Ê¼µÄ×Ö·û´®
-     * @param s Ô­Ê¼×Ö·û´®
-     * @param srcEncoding Ô´±àÂë·½Ê½
-     * @param destEncoding Ä¿±ê±àÂë·½Ê½
-     * @return ×ª»»±àÂëºóµÄ×Ö·û´®£¬Ê§°Ü·µ»ØÔ­Ê¼×Ö·û´®
+     * å¯¹åŸå§‹å­—ç¬¦ä¸²è¿›è¡Œç¼–ç è½¬æ¢ï¼Œå¦‚æœå¤±è´¥ï¼Œè¿”å›åŸå§‹çš„å­—ç¬¦ä¸²
+     * @param s åŸå§‹å­—ç¬¦ä¸²
+     * @param srcEncoding æºç¼–ç æ–¹å¼
+     * @param destEncoding ç›®æ ‡ç¼–ç æ–¹å¼
+     * @return è½¬æ¢ç¼–ç åçš„å­—ç¬¦ä¸²ï¼Œå¤±è´¥è¿”å›åŸå§‹å­—ç¬¦ä¸²
      */
     public static String getString(String s, String srcEncoding, String destEncoding) {
         try {
@@ -53,10 +53,10 @@ public class Utils {
     }
     
     /**
-     * ¸ù¾İÄ³ÖÖ±àÂë·½Ê½½«×Ö½ÚÊı×é×ª»»³É×Ö·û´®
-     * @param b ×Ö½ÚÊı×é
-     * @param encoding ±àÂë·½Ê½
-     * @return Èç¹ûencoding²»Ö§³Ö£¬·µ»ØÒ»¸öÈ±Ê¡±àÂëµÄ×Ö·û´®
+     * æ ¹æ®æŸç§ç¼–ç æ–¹å¼å°†å­—èŠ‚æ•°ç»„è½¬æ¢æˆå­—ç¬¦ä¸²
+     * @param b å­—èŠ‚æ•°ç»„
+     * @param encoding ç¼–ç æ–¹å¼
+     * @return å¦‚æœencodingä¸æ”¯æŒï¼Œè¿”å›ä¸€ä¸ªç¼ºçœç¼–ç çš„å­—ç¬¦ä¸²
      */
     public static String getString(byte[] b, String encoding) {
         try {
@@ -67,12 +67,12 @@ public class Utils {
     }
     
     /**
-     * ¸ù¾İÄ³ÖÖ±àÂë·½Ê½½«×Ö½ÚÊı×é×ª»»³É×Ö·û´®
-     * @param b ×Ö½ÚÊı×é
-     * @param offset Òª×ª»»µÄÆğÊ¼Î»ÖÃ
-     * @param len Òª×ª»»µÄ³¤¶È
-     * @param encoding ±àÂë·½Ê½
-     * @return Èç¹ûencoding²»Ö§³Ö£¬·µ»ØÒ»¸öÈ±Ê¡±àÂëµÄ×Ö·û´®
+     * æ ¹æ®æŸç§ç¼–ç æ–¹å¼å°†å­—èŠ‚æ•°ç»„è½¬æ¢æˆå­—ç¬¦ä¸²
+     * @param b å­—èŠ‚æ•°ç»„
+     * @param offset è¦è½¬æ¢çš„èµ·å§‹ä½ç½®
+     * @param len è¦è½¬æ¢çš„é•¿åº¦
+     * @param encoding ç¼–ç æ–¹å¼
+     * @return å¦‚æœencodingä¸æ”¯æŒï¼Œè¿”å›ä¸€ä¸ªç¼ºçœç¼–ç çš„å­—ç¬¦ä¸²
      */
     public static String getString(byte[] b, int offset, int len, String encoding) {
         try {
@@ -83,8 +83,8 @@ public class Utils {
     }
     
     /**
-     * @param ip ipµÄ×Ö½ÚÊı×éĞÎÊ½
-     * @return ×Ö·û´®ĞÎÊ½µÄip
+     * @param ip ipçš„å­—èŠ‚æ•°ç»„å½¢å¼
+     * @return å­—ç¬¦ä¸²å½¢å¼çš„ip
      */
     public static String getIpStringFromBytes(byte[] ip) {
     	StringBuffer sb = new StringBuffer();

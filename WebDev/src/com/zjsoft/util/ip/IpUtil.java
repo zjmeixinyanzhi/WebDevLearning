@@ -1,4 +1,4 @@
-package com.zjsoft.util.ip;
+﻿package com.zjsoft.util.ip;
 
 import com.zjsoft.util.ip.IPSeeker;
 
