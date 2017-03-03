@@ -25,6 +25,7 @@ public class ImageServlet extends HttpServlet {
 		String referer = request.getHeader("referer");
 
 		// 如果直接输入的网址，或者是从别的网站打开的，显示错误信息。
+
 		if(referer == null 
 				|| !referer.toLowerCase().startsWith("http://" + request.getServerName().toLowerCase())){
 			// 打开图片 error.gif

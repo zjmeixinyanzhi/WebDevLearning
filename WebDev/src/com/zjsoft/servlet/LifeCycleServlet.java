@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +18,7 @@ public class LifeCycleServlet extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
-		this.log("执行 init() 方法 ... ");
+		System.out.println("执行 init() 方法 ... ");
 		ServletConfig conf = this.getServletConfig();
 		startPoint = Double.parseDouble(conf.getInitParameter("startPoint"));
 	}
@@ -25,7 +26,7 @@ public class LifeCycleServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
-		this.log("执行 service() 方法 ... ");
+		System.out.println("执行 service() 方法 ... ");
 		super.service(arg0, arg1);
 	}
 

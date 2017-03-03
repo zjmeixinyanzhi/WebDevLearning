@@ -5,10 +5,11 @@ import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+@WebServlet("/ForwardServlet")
 public class ForwardServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -291840563095094360L;
@@ -28,12 +29,12 @@ public class ForwardServlet extends HttpServlet {
 			// 通过 setAttribute 方法传递一个 Date 对象给 JSP 页面
 			Date date = new Date();
 			request.setAttribute("date", date);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/forward.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/forward.jsp");
 			dispatcher.forward(request, response);
 		}
 		// 跳转到另一个 Servlet
 		else if("servlet".equals(destination)){
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/servlet/LifeCycleServlet");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("LifeCycleServlet");
 			dispatcher.forward(request, response);
 		}
 		else{
