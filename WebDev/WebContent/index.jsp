@@ -27,5 +27,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<p>示例：<a href="ForwardServlet" >Forward转向</a> </p>
 		<p>示例：<a href="RedirectServlet" >Redirect重定向</a> </p>
 		<p>示例：<a href="ThreadSafetyServlet" >Servlet线程安全</a> </p>
+		<p>示例：<a href="jsp/cookie.jsp" >cookie简单示例</a> </p>
+		<p>示例：<a href="jsp/setCookie.jsp" >设置cookie属性</a> </p>
+		<p>示例：<a href="jsp/javascript.jsp" >Javascript读取cookie属性</a> </p>
+		<p>示例：<a href="jsp/loginCookie.jsp" >cookie永久登录</a> </p>
+		<p>示例：<a href="jsp/session.jsp" >Session机制</a> </p>
 	</body>
 </html>

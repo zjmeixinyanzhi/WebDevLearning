@@ -44,6 +44,7 @@
 		
 		// 把帐号连同密钥使用MD5后加密后保存
 		String ssid = calcMD5(account + KEY);
+		System.out.println("MD5:"+ssid);
 				
 		// 把帐号保存到Cookie中 并控制有效期
 		Cookie accountCookie = new Cookie("account", account);
@@ -95,6 +96,8 @@
 	
 	if(account != null && ssid != null){
 		// 如果加密规则正确, 则视为已经登录
+		System.out.println("已有的Md5 SSID:"+calcMD5(ssid));
+		
 		loggin = ssid.equals(calcMD5(account + KEY));
 	}
 	

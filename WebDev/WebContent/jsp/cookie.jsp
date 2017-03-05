@@ -13,6 +13,7 @@
 		Cookie cookie = cookies[i];
 		if("username".equals(cookie.getName())){
 			username = cookie.getValue();
+			System.out.println(cookie.getMaxAge());
 			System.out.println(username);
 		}
 		else if("visitTimes".equals(cookie.getName())){

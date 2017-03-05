@@ -1,18 +1,26 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <jsp:directive.page import="sun.misc.BASE64Encoder"/>
 <jsp:directive.page import="java.io.InputStream"/>
-<jsp:directive.page import="java.io.File"/>
+<jsp:directive.page import="java.io.*"/>
 <%
-	File file = new File(this.getServletContext().getRealPath("cookie.gif"));
+	//System.out.println(this.getServletContext().getRealPath("/images/cookie.gif"));
+	File file = new File(this.getServletContext().getRealPath("/images/cookie.gif"));
 	
 	// 二进制数组
 	byte[] binary = new byte[(int)file.length()];
 	
 	// 从图片文件读取二进制数据. 
+	System.out.println(this.getServletContext().getResourceAsStream(file.getName()));
 	InputStream ins = this.getServletContext().getResourceAsStream(file.getName());
+	
 	ins.read(binary);
 	ins.close();
 	
+	//自己添加从文件流中读，出现java.lang.IllegalArgumentException: Control character in cookie value or attribute.错误
+	//FileInputStream file_in=new FileInputStream(file.getAbsoluteFile());
+	//file_in.read(binary);
+  	//file_in.close();	 
+	 
 	// BASE64 编码
 	String content = BASE64Encoder.class.newInstance().encode(binary);
 	

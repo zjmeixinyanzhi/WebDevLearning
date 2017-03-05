@@ -1,3 +1,4 @@
+<%@page import="com.sun.glass.ui.SystemClipboard"%>
 <%@ page language="java" pageEncoding="UTF-8" %>
 <jsp:directive.page import="java.net.URLEncoder"/>
 <%!
@@ -17,6 +18,8 @@
 		String path = request.getParameter("path");
 		String comment = request.getParameter("comment");
 		String secure = request.getParameter("secure");
+		
+		System.out.println(name+" "+value);
 		
 		if(!isNull(name)){
 		
@@ -96,6 +99,5 @@
 		</form>
 	</fieldset>
 </div>
-
 </body>
 </html>

@@ -27,8 +27,8 @@
 				// 登录成功, 设置将用户的信息以及登录时间保存到 Session
 				session.setAttribute("person", person);
 				session.setAttribute("loginTime", new Date());
-				
-				response.sendRedirect(request.getContextPath() + "/welcome.jsp");
+				System.out.println(request.getContextPath());
+				response.sendRedirect(request.getContextPath() + "/jsp/welcome.jsp");
 				return;
 				
 			}
@@ -56,7 +56,7 @@
 					<td>
 					</td>
 					<td>
-						<span><img src="images/errorstate.gif"></span>
+						<span><img src="../images/errorstate.gif"></span>
 						<span style="color:red; "><%= message %></span>
 					</td>
 				</tr>
@@ -88,7 +88,6 @@
 		</form>
 	</fieldset>
 </div>
-
 Hello Kitty, hellokitty
 
 </body>
