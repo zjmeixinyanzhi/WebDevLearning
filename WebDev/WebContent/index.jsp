@@ -94,7 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<a href="jsp/session.jsp" >Session机制</a>
 						</li>
 						<li>
-							天气预报
+							<a href="jsp/image.jsp" >Filter应用：图片防盗链</a>
 						</li>
 						<li>
 							房产家居
