@@ -9,4 +9,5 @@
 
 2、Spring下为Spring框架开发示例：
 * Spring OAuth2 
+* Spring Jpa Mvc
 
