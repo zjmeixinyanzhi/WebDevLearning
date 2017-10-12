@@ -1,0 +1,605 @@
+2017-09-27 11:05:15,335 INFO [main] o.s.c.s.GenericApplicationContext [AbstractApplicationContext.java:513] Refreshing org.springframework.context.support.GenericApplicationContext@6043cd28: startup date [Wed Sep 27 11:05:15 CST 2017]; root of context hierarchy
+2017-09-27 11:05:16,191 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:309] Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerByCGLIB$$3b795af5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-09-27 11:05:16,610 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:314] Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-27 11:05:16,769 INFO [main] o.h.a.c.Version [Version.java:37] HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2017-09-27 11:05:16,778 INFO [main] o.h.Version [Version.java:41] HHH000412: Hibernate Core {4.2.6.Final}
+2017-09-27 11:05:16,782 INFO [main] o.h.c.Environment [Environment.java:238] HHH000206: hibernate.properties not found
+2017-09-27 11:05:16,785 INFO [main] o.h.c.Environment [Environment.java:345] HHH000021: Bytecode provider name : javassist
+2017-09-27 11:05:16,813 INFO [main] o.h.e.Ejb3Configuration [Ejb3Configuration.java:529] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-27 11:05:17,020 INFO [main] o.h.s.j.c.i.ConnectionProviderInitiator [ConnectionProviderInitiator.java:188] HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2017-09-27 11:05:19,174 WARN [main] o.h.e.j.i.JdbcServicesImpl [JdbcServicesImpl.java:169] HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)
+2017-09-27 11:05:19,189 ERROR [main] o.s.t.c.TestContextManager [TestContextManager.java:329] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f4205be] to prepare test instance [com.sivalabs.springapp.UserServiceTest@54e22bdd]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/sivalabs/springapp/config/PersistenceConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:592) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:989) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:973) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:750) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 31 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:581) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 48 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory(PersistenceConfig.java:69) ~[classes/:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.CGLIB$entityManagerFactory$1(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248$$FastClassByCGLIB$$870fef44.invoke(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:326) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.entityManagerFactory(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 49 common frames omitted
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1818) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1776) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	... 64 common frames omitted
+2017-09-27 11:05:19,210 INFO [main] o.s.c.s.GenericApplicationContext [AbstractApplicationContext.java:513] Refreshing org.springframework.context.support.GenericApplicationContext@235a0c16: startup date [Wed Sep 27 11:05:19 CST 2017]; root of context hierarchy
+2017-09-27 11:05:19,349 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:309] Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerByCGLIB$$3b795af5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-09-27 11:05:19,400 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:314] Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-27 11:05:19,402 INFO [main] o.h.e.Ejb3Configuration [Ejb3Configuration.java:529] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-27 11:05:19,406 INFO [main] o.h.s.j.c.i.ConnectionProviderInitiator [ConnectionProviderInitiator.java:188] HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2017-09-27 11:05:21,411 WARN [main] o.h.e.j.i.JdbcServicesImpl [JdbcServicesImpl.java:169] HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)
+2017-09-27 11:05:21,414 ERROR [main] o.s.t.c.TestContextManager [TestContextManager.java:329] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f4205be] to prepare test instance [com.sivalabs.springapp.UserServiceTest@6b44435b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/sivalabs/springapp/config/PersistenceConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:592) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:989) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:973) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:750) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 31 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:581) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 48 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory(PersistenceConfig.java:69) ~[classes/:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.CGLIB$entityManagerFactory$1(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248$$FastClassByCGLIB$$870fef44.invoke(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:326) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.entityManagerFactory(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 49 common frames omitted
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1818) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1776) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	... 64 common frames omitted
+2017-09-27 11:05:21,419 INFO [main] o.s.c.s.GenericApplicationContext [AbstractApplicationContext.java:513] Refreshing org.springframework.context.support.GenericApplicationContext@698122b2: startup date [Wed Sep 27 11:05:21 CST 2017]; root of context hierarchy
+2017-09-27 11:05:21,478 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:309] Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerByCGLIB$$3b795af5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-09-27 11:05:21,541 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:314] Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-27 11:05:21,542 INFO [main] o.h.e.Ejb3Configuration [Ejb3Configuration.java:529] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-27 11:05:21,546 INFO [main] o.h.s.j.c.i.ConnectionProviderInitiator [ConnectionProviderInitiator.java:188] HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2017-09-27 11:05:23,550 WARN [main] o.h.e.j.i.JdbcServicesImpl [JdbcServicesImpl.java:169] HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)
+2017-09-27 11:05:23,552 ERROR [main] o.s.t.c.TestContextManager [TestContextManager.java:329] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f4205be] to prepare test instance [com.sivalabs.springapp.UserServiceTest@1f2f9244]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/sivalabs/springapp/config/PersistenceConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:592) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:989) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:973) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:750) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 31 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:581) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 48 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory(PersistenceConfig.java:69) ~[classes/:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.CGLIB$entityManagerFactory$1(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248$$FastClassByCGLIB$$870fef44.invoke(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:326) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.entityManagerFactory(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 49 common frames omitted
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1818) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1776) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	... 64 common frames omitted
+2017-09-27 11:06:03,652 INFO [main] o.s.c.s.GenericApplicationContext [AbstractApplicationContext.java:513] Refreshing org.springframework.context.support.GenericApplicationContext@6043cd28: startup date [Wed Sep 27 11:06:03 CST 2017]; root of context hierarchy
+2017-09-27 11:06:04,234 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:309] Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerByCGLIB$$3b795af5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-09-27 11:06:04,614 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:314] Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-27 11:06:04,794 INFO [main] o.h.a.c.Version [Version.java:37] HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2017-09-27 11:06:04,803 INFO [main] o.h.Version [Version.java:41] HHH000412: Hibernate Core {4.2.6.Final}
+2017-09-27 11:06:04,806 INFO [main] o.h.c.Environment [Environment.java:238] HHH000206: hibernate.properties not found
+2017-09-27 11:06:04,813 INFO [main] o.h.c.Environment [Environment.java:345] HHH000021: Bytecode provider name : javassist
+2017-09-27 11:06:04,837 INFO [main] o.h.e.Ejb3Configuration [Ejb3Configuration.java:529] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-27 11:06:05,002 INFO [main] o.h.s.j.c.i.ConnectionProviderInitiator [ConnectionProviderInitiator.java:188] HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2017-09-27 11:06:07,146 WARN [main] o.h.e.j.i.JdbcServicesImpl [JdbcServicesImpl.java:169] HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)
+2017-09-27 11:06:07,159 ERROR [main] o.s.t.c.TestContextManager [TestContextManager.java:329] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f4205be] to prepare test instance [com.sivalabs.springapp.UserServiceTest@54e22bdd]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/sivalabs/springapp/config/PersistenceConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:592) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:989) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:973) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:750) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 31 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:581) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 48 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory(PersistenceConfig.java:69) ~[classes/:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.CGLIB$entityManagerFactory$1(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248$$FastClassByCGLIB$$870fef44.invoke(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:326) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.entityManagerFactory(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 49 common frames omitted
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1818) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1776) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	... 64 common frames omitted
+2017-09-27 11:06:07,172 INFO [main] o.s.c.s.GenericApplicationContext [AbstractApplicationContext.java:513] Refreshing org.springframework.context.support.GenericApplicationContext@235a0c16: startup date [Wed Sep 27 11:06:07 CST 2017]; root of context hierarchy
+2017-09-27 11:06:07,340 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:309] Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerByCGLIB$$3b795af5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-09-27 11:06:07,407 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:314] Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-27 11:06:07,409 INFO [main] o.h.e.Ejb3Configuration [Ejb3Configuration.java:529] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-27 11:06:07,417 INFO [main] o.h.s.j.c.i.ConnectionProviderInitiator [ConnectionProviderInitiator.java:188] HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2017-09-27 11:06:09,422 WARN [main] o.h.e.j.i.JdbcServicesImpl [JdbcServicesImpl.java:169] HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)
+2017-09-27 11:06:09,428 ERROR [main] o.s.t.c.TestContextManager [TestContextManager.java:329] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f4205be] to prepare test instance [com.sivalabs.springapp.UserServiceTest@6b44435b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/sivalabs/springapp/config/PersistenceConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:592) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:989) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:973) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:750) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 31 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:581) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 48 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory(PersistenceConfig.java:69) ~[classes/:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.CGLIB$entityManagerFactory$1(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248$$FastClassByCGLIB$$870fef44.invoke(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:326) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.entityManagerFactory(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 49 common frames omitted
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1818) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1776) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	... 64 common frames omitted
+2017-09-27 11:06:09,441 INFO [main] o.s.c.s.GenericApplicationContext [AbstractApplicationContext.java:513] Refreshing org.springframework.context.support.GenericApplicationContext@698122b2: startup date [Wed Sep 27 11:06:09 CST 2017]; root of context hierarchy
+2017-09-27 11:06:09,608 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:309] Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerByCGLIB$$3b795af5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-09-27 11:06:09,676 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:314] Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-09-27 11:06:09,678 INFO [main] o.h.e.Ejb3Configuration [Ejb3Configuration.java:529] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-09-27 11:06:09,686 INFO [main] o.h.s.j.c.i.ConnectionProviderInitiator [ConnectionProviderInitiator.java:188] HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2017-09-27 11:06:11,684 WARN [main] o.h.e.j.i.JdbcServicesImpl [JdbcServicesImpl.java:169] HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)
+2017-09-27 11:06:11,686 ERROR [main] o.s.t.c.TestContextManager [TestContextManager.java:329] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f4205be] to prepare test instance [com.sivalabs.springapp.UserServiceTest@1f2f9244]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175) [spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/sivalabs/springapp/config/PersistenceConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:592) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:989) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:973) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:750) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91) ~[spring-test-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 31 common frames omitted
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory()] threw exception; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:581) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 48 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build EntityManagerFactory
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:924) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig.entityManagerFactory(PersistenceConfig.java:69) ~[classes/:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.CGLIB$entityManagerFactory$1(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248$$FastClassByCGLIB$$870fef44.invoke(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:326) ~[spring-context-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	at com.sivalabs.springapp.config.PersistenceConfig$$EnhancerByCGLIB$$7082b248.entityManagerFactory(<generated>) ~[spring-core-4.0.0.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166) ~[spring-beans-4.0.0.RELEASE.jar:4.0.0.RELEASE]
+	... 49 common frames omitted
+Caused by: org.hibernate.HibernateException: Connection cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:98) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:68) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:170) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:76) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:160) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:132) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1818) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1776) ~[hibernate-core-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914) ~[hibernate-entitymanager-4.2.6.Final.jar:4.2.6.Final]
+	... 64 common frames omitted
+2017-10-12 14:37:43,996 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] POST request for "http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=password&username=bill&password=abc123" resulted in 404 (null); invoking error handler
+2017-10-12 14:38:50,714 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] POST request for "http://localhost:8080/springmvc-datajpa-security-demo/oauth/token?grant_type=password&username=bill&password=abc123" resulted in 500 (null); invoking error handler
+2017-10-12 14:41:38,153 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] GET request for "http://localhost:8080/springmvc-datajpa-security-demo/user/?access_token=07d1b177-00a6-43c6-961c-a6971a4c2f83" resulted in 404 (null); invoking error handler
+2017-10-12 14:42:49,311 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] POST request for "http://localhost:8080/springmvc-datajpa-security-demo/oauth/token?grant_type=password&username=bill&password=abc123" resulted in 500 (null); invoking error handler
+2017-10-12 14:43:01,197 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] GET request for "http://localhost:8080/springmvc-datajpa-security-demo/rest/users/?access_token=07d1b177-00a6-43c6-961c-a6971a4c2f83" resulted in 403 (null); invoking error handler
+2017-10-12 14:49:01,789 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] POST request for "http://localhost:8080/springmvc-datajpa-security-demo/oauth/token?grant_type=password&username=bill&password=abc123" resulted in 500 (null); invoking error handler
+2017-10-12 14:49:36,734 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] GET request for "http://localhost:8080/springmvc-datajpa-security-demo/rest/users/?access_token=9463bf7c-0b34-4f7b-b613-8dbdb6884e46" resulted in 403 (null); invoking error handler
+2017-10-12 14:53:26,487 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] GET request for "http://localhost:8080/springmvc-datajpa-security-demo/user/1?access_token=8444fc1f-6946-4035-8b67-aa427f926054" resulted in 404 (null); invoking error handler
+2017-10-12 14:55:06,215 WARN [main] o.s.w.c.RestTemplate [RestTemplate.java:568] POST request for "http://localhost:8080/springmvc-datajpa-security-demo/oauth/token?grant_type=password&username=bill&password=abc123" resulted in 500 (null); invoking error handler
