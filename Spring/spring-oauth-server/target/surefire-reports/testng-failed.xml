@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)" preserve-order="false">
+    <classes>
+      <class name="com.monkeyk.sos.infrastructure.jdbc.OauthRepositoryJdbcTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="updateOauthClientDetailsArchive"/>
+          <include name="findAllOauthClientDetails"/>
+          <include name="findOauthClientDetails"/>
+          <include name="saveOauthClientDetails"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class>
+      <class name="com.monkeyk.sos.infrastructure.jdbc.UserRepositoryJdbcTest">
+        <methods>
+          <include name="updateUser"/>
+          <include name="findByGuid"/>
+          <include name="findUsersByUsername"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="findByUsername"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
